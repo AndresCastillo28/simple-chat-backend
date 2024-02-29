@@ -3,13 +3,14 @@ const ChatMessage = require("../models/ChatMessage");
 
 
 function initSocket(server) {
-  const io = socketIo(server, {
+  const io = require("socket.io")(server, {
     cors: {
-      origin: "*", // Set the real value
-      methods: ["GET", "POST"],
-      credentials: true,
-    },
+      origin: "https://simple-chat-50nc72k96-andrescastillo28.vercel.app", // Your frontend's origin
+      methods: ["GET", "POST"], // Allowed HTTP methods
+      credentials: true // Important for sessions or when using cookies
+    }
   });
+  
 
   io.on("connection", (socket) => {
     console.log("User connected.");
