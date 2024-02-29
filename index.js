@@ -13,7 +13,7 @@ const initSocket = require('./sockets/socketConfig');
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: 'https://simple-chat-bice.vercel.app',
+  origin: 'https://simple-chat-backend-2.onrender.com',
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204
