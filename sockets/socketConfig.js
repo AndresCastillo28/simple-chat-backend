@@ -7,7 +7,6 @@ function initSocket(server) {
     cors: {
       origin: "https://simple-chat-50nc72k96-andrescastillo28.vercel.app", // Your frontend's origin
       methods: ["GET", "POST"], // Allowed HTTP methods
-      credentials: true // Important for sessions or when using cookies
     }
   });
   
