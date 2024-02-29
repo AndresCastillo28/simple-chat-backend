@@ -5,7 +5,7 @@ const ChatMessage = require("../models/ChatMessage");
 function initSocket(server) {
   const io = require("socket.io")(server, {
     cors: {
-      origin: "https://simple-chat-backend-2.onrender.com", 
+      origin: "https://simple-chat-bice.vercel.app", 
       methods: ["GET", "POST"], 
     }
   });
