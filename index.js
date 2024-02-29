@@ -12,7 +12,15 @@ const initSocket = require('./sockets/socketConfig');
 
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://simple-chat-50nc72k96-andrescastillo28.vercel.app/',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+
 connectDB();
 
 app.get("/", (req, res) => {
