@@ -3,12 +3,15 @@ const ChatMessage = require("../models/ChatMessage");
 
 
 function initSocket(server) {
-  const io = require("socket.io")(server, {
+  const io = require('socket.io')(server, {
     cors: {
-      origin: "https://simple-chat-bice.vercel.app", 
-      methods: ["GET", "POST"], 
+      origin: "https://simple-chat-bice.vercel.app",
+      methods: ["GET", "POST"],
+      allowedHeaders: ["my-custom-header"],
+      credentials: true
     }
   });
+  
   
 
   io.on("connection", (socket) => {

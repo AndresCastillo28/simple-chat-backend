@@ -16,7 +16,8 @@ const corsOptions = {
   origin: 'https://simple-chat-bice.vercel.app',
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
-  optionsSuccessStatus: 204
+  optionsSuccessStatus: 204,
+  credentials: true
 };
 
 app.use(cors(corsOptions));
